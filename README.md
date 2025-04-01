@@ -17,5 +17,9 @@ https://rickandmortyapi.com
 
 -El mismo componente card es utilizado tanto en el resultado de la búsqueda como para mostrar los favoritos.
 
+#Desplegado en
+
+https://rickandmortypage2025.netlify.app/
 
 
+Alumno: Alejandro Luna
