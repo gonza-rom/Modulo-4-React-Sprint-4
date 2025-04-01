@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import "tailwindcss";
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
