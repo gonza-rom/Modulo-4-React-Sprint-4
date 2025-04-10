@@ -1,25 +1,46 @@
-# Rick and Morty Page
+🌌 Rick and Morty Page
+🧪 ¡Explorá el multiverso de Rick and Morty!
+Esta aplicación te permite buscar personajes ingresando al menos 3 caracteres del nombre y la cantidad máxima de resultados que querés obtener. Los datos se obtienen desde la API pública:
 
-Permite realizar la búsqueda de personajes de Rick and Morty, indicando al menos 3 caracteres del nombre y la cantidad máxima de personajes que se desea obtener.
-Los personajes se obtienen de la API pública:
+🔗 https://rickandmortyapi.com
 
-https://rickandmortyapi.com
+⚙️ Tecnologías y funcionalidades destacadas
+🔍 Búsqueda inteligente
 
--Se utiliza Axios para la petición, aprovechando la respuesta en formato JSON y el manejo de errores mejorado.
+La función que realiza la consulta está optimizada con useCallback para evitar renderizados innecesarios.
 
--La función que realiza la petición utiliza el hook useCallback para evitar redefinirla en cada renderizado, siempre que no cambien las dependencias. En este caso, depende del nombre a buscar y la cantidad requerida.
+Los personajes se cargan progresivamente según la cantidad solicitada.
 
--Mientras se carga el listado de personajes, se muestra un loader para indicar al usuario que se está ejecutando una tarea. Al finalizar, se muestra un toast indicando la cantidad de personajes encontrados o un mensaje de error si no se obtuvieron resultados. Para evitar la acumulación de toasts, se modifica el mismo toast lanzado al inicio de la búsqueda, manejando para ello el ID mediante el hook useRef, dado que dicho ID se maneja como un estado pero su actualización no requiere que dispare un nuevo renderizado.
+📦 Axios + JSON
 
--Los personajes obtenidos se muestran en una tarjeta (card), la cual cuenta con un icono para agregarlo o quitarlo de la lista de favoritos.
+Se utiliza Axios para la petición HTTP y el manejo de respuestas en formato JSON.
 
--Los favoritos se manejan con un array en el contexto y se persisten en el localStorage del navegador. La lista de favoritos se abre (y se puede cerrar) desde un botón en el header. Se despliega en un modal manejado por una variable de estado en el contexto.
+Captura errores y responde con mensajes personalizados.
 
--El mismo componente card es utilizado tanto en el resultado de la búsqueda como para mostrar los favoritos.
+⏳ Experiencia de usuario fluida
 
-#Desplegado en
+Se muestra un loader animado mientras se realiza la búsqueda.
 
-https://rickandmortypage2025.netlify.app/
+Un toast dinámico informa el estado del proceso: cargando, éxito o error.
 
+Se reutiliza el mismo toast mediante useRef, evitando acumulación innecesaria.
 
-Alumno: Alejandro Luna
+🃏 Visualización con tarjetas (Cards)
+
+Cada personaje aparece en una card interactiva, con botón para agregar o quitar de favoritos ⭐.
+
+❤️ Gestión de favoritos
+
+Los favoritos se almacenan en un contexto global y se persisten en localStorage.
+
+Pueden visualizarse en un modal desde el botón del header.
+
+♻️ Componente reutilizable
+
+El mismo componente card se usa tanto para los resultados de búsqueda como para los favoritos.
+
+🚀 Sitio desplegado
+🔗 https://rickandmortygon.netlify.app
+
+👨‍🎓 Alumno
+Gonzalo Romero
