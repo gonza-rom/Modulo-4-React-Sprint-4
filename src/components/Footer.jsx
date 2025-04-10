@@ -3,7 +3,7 @@ const Footer = () => {
 
     return (
 
-        < div className={`flex flex-col h-50 bottom-0 bg-green-900 px-20 pt-5  text-gray-200 `} >
+        < div className={`flex flex-col h-50 bottom-0 bg-gradient-to-b from-cyan-900 to-cyan-400 px-20 pt-5  text-gray-200 `} >
             <ul className='space-y-5'>
                 <li> <span className='hover:text-white hover:underline cursor-pointer '>Quienes somos</span></li>
                 <li> <span className='hover:text-white hover:underline cursor-pointer '>Avisos legales</span></li>
